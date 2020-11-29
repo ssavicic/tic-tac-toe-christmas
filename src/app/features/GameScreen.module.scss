@@ -1,0 +1,74 @@
+@import "../../styles/colors.scss";  
+@import "../../styles/mixins.scss";
+@import "../../styles/animations.scss";
+
+.game {    
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    &_mode {
+        text-align: center;
+    }
+    
+    &_wrapper {
+        display: grid;
+        grid-template-columns: 110px 110px 110px;
+        grid-template-rows: 110px 110px 110px;
+        justify-content: center;
+        margin-top: 100px;
+        flex: 1;
+
+        @media (max-height: 768px) {
+            margin-top: 20px;
+        }
+    }
+
+    &_status {
+        text-align: center;
+        padding: 20px 0 0;
+    }
+
+    &_on-move {
+        color: $christmasRed;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    &_winner {
+        color: $christmasRed;
+        font-size: 2rem;
+        font-weight: bold;
+        flex: 1;
+        text-align: center;
+        margin: 20px 0 10px; 
+    }
+
+    &_end {
+        text-align: center;
+        margin-bottom: 40px;
+
+        @media (max-height: 768px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &_button {
+        @include radius(3px); 
+        color: $textColorNegative;
+        padding: 10px 20px;
+        min-width: 100px;
+        text-align: center;
+        margin: 0 5px;
+        text-transform: uppercase;
+    }
+
+    &_cant-stop {
+        background-color: green;
+    }
+
+    &_im-pussy {
+        background-color: $christmasRed;
+    }
+}

@@ -1,0 +1,43 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/animations.scss";
+
+.block {
+    background-color: $darkGray;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $primaryColor;
+    }
+
+    &-active {
+        background-color: transparent;
+    }
+
+    &_mark {
+        position: absolute;
+        visibility: hidden;
+        display: flex;
+        font-size: 60px;
+        width: 60px;
+        height: 60px;
+        top: 50%;
+        left: 50%;
+        margin-top: -30px;
+        margin-left: -30px;
+        align-items: center;
+        justify-content: center;
+        &-active {
+            @extend .flip-vertical-right;
+            visibility: visible;
+        }
+
+        &_X {}
+        &_O {}
+    }
+}

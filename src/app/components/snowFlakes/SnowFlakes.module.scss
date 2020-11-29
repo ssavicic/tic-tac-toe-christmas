@@ -1,0 +1,13 @@
+@import "../../../styles/colors.scss";  
+@import "../../../styles/mixins.scss";
+@import "../../../styles/animations.scss";
+
+.snowflake {
+    &_item {
+        @extend .snowflake;
+        color: $textColor;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $darkColor;
+    }
+}
